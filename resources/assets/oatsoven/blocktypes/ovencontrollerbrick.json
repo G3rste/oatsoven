@@ -1,5 +1,5 @@
 {
-    "code": "ovencontroller",
+    "code": "ovencontrollerbrick",
     "class": "OvenController",
     "entityClass": "OvenController",
     "behaviors": [
@@ -8,6 +8,7 @@
         }
     ],
     "variantgroups": [
+        { "code": "rock", "states": ["andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite" ] },
         {
             "code": "burnstate",
             "states": [
@@ -36,6 +37,9 @@
         }
     },
     "blockmaterial": "Stone",
+    "textures": {
+		"rock": {  "base": "game:block/stone/brick/{rock}*" }
+	},
     "sidesolid": {
         "all": false
     },

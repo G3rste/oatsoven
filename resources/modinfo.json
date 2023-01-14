@@ -1,12 +1,12 @@
 {
     "type": "code",
     "modid": "oatsoven",
-    "name": "Oats oven",
+    "name": "Oat's Oven",
     "side": "universal",
     "authors": [
-        "Insert your name here"
+        "Captain Oats"
     ],
-    "description": "Creates a usable pizza oven.",
+    "description": "Creates a usable large stone oven.",
     "version": "0.0.1",
     "dependencies": {
         "game": "1.17.0"

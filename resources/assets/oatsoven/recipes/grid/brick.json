@@ -1,0 +1,39 @@
+[
+{
+	ingredientPattern: "HPC,_M_,_R_",
+	ingredients: {
+		"H": { type: "item", code: "game:hammer-*", isTool: true },
+		"C": { type: "item", code: "game:chisel-*", isTool: true },
+		"P": { type: "block", code: "game:rockpolished-*", name: "rock", allowedVariants: ["andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite" ] },
+		"M": { type: "item", code: "game:metalplate-copper" },
+		"R": { type: "block", code: "game:stonebricks-*", name: "rock", allowedVariants: ["andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite" ] }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "ovenbakingtopbrick-{rock}" }
+},
+{
+	ingredientPattern: "HRC,_M_",
+	ingredients: {
+		"H": { type: "item", code: "game:hammer-*", isTool: true },
+		"C": { type: "item", code: "game:chisel-*", isTool: true },
+		"M": { type: "item", code: "game:metalplate-copper", quantity: 2  },
+		"R": { type: "block", code: "game:stonebricks-*", name: "rock", allowedVariants: ["andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite" ] }
+	},
+	width: 3,
+	height: 2,
+	output: { type: "block", code: "ovencontrollerbrick-{rock}-extinct-east" }
+},
+{
+	ingredientPattern: "HPC,R_R",
+	ingredients: {
+		"H": { type: "item", code: "game:hammer-*", isTool: true },
+		"C": { type: "item", code: "game:chisel-*", isTool: true },
+		"P": { type: "block", code: "game:rockpolished-*", name: "rock", allowedVariants: ["andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite" ] },
+		"R": { type: "block", code: "game:stonebricks-*", name: "rock", allowedVariants: ["andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite" ] }
+	},
+	width: 3,
+	height: 2,
+	output: { type: "block", code: "ovengrillbrick-{rock}-cold-east" }
+}
+]

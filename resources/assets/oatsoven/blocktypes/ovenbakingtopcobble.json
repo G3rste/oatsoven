@@ -1,0 +1,29 @@
+{
+    "code": "ovenbakingtopcobble",
+    "class": "OvenBakingTop",
+    "entityClass": "OvenBakingTop",
+    "variantgroups": [
+    { "code": "rock", "states": ["andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite", "kimberlite", "suevite", "whitemarble", "redmarble", "greenmarble"] }
+    ],
+    "creativeinventory": {
+        "general": [
+            "*"
+        ]
+    },
+    "shape": {
+        "base": "ovenbakingtop"
+    },
+    "textures": {
+		"rock": {  "base": "game:block/stone/cobblestone/{rock}*" },
+		"smoothstone": {  "base": "game:block/stone/polishedrock/{rock}" }
+	},
+    "blockmaterial": "Stone",
+    "sidesolid": {
+        "all": false
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "lightAbsorption": 1,
+    "maxStackSize": 8
+}

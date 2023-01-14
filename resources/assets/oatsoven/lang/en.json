@@ -1,5 +1,13 @@
 {
-    "block-ovenbakingtop": "Stone oven baking space",
-    "block-ovencontroller-*": "Stone oven heat source",
-    "block-ovengrill-*": "Stone oven heat distribution"
+    "block-ovenbakingtopplain-*": "Plain stone oven baking space",
+    "block-ovencontrollerplain-*": "Plain stone oven heat source",
+    "block-ovengrillplain-*": "Plain stone oven heat distribution",
+
+    "block-ovenbakingtopcobble-*": "Cobble stone oven baking space",
+    "block-ovencontrollercobble-*": "Cobble stone oven heat source",
+    "block-ovengrillcobble-*": "Cobble stone oven heat distribution",
+
+    "block-ovenbakingtopbrick-*": "Brick stone oven baking space",
+    "block-ovencontrollerbrick-*": "Brick stone oven heat source",
+    "block-ovengrillbrick-*": "Brick stone oven heat distribution"
 }

@@ -1,0 +1,128 @@
+{
+    "code": "ovengrillcobble",
+    "entityClass": "OvenGrill",
+    "behaviors": [
+        {
+            "name": "HorizontalOrientable"
+        }
+    ],
+    "variantgroups": [
+        { "code": "rock", "states": ["andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite", "kimberlite", "suevite", "whitemarble", "redmarble", "greenmarble"] },
+        {
+            "code": "temperature",
+            "states": [
+                "cold",
+                "hot"
+            ]
+        },
+        {
+            "code": "side",
+            "loadFromProperties": "abstract/horizontalorientation"
+        }
+    ],
+    "creativeinventory": {
+        "general": [
+            "*-cold-east"
+        ]
+    },
+    "shape": {
+        "base": "ovengrill",
+        "rotateYByType": {
+            "*-north": 90,
+            "*-east": 0,
+            "*-south": 270,
+            "*-west": 180
+        }
+    },
+    "blockmaterial": "Stone",
+    "textures": {
+		"rock": {  "base": "game:block/stone/cobblestone/{rock}*" },
+		"smoothstone": {  "base": "game:block/stone/polishedrock/{rock}" }
+	},
+    "sidesolid": {
+        "all": false
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "lightAbsorption": 1,
+    "maxStackSize": 8,
+    "particlePropertiesByType": {
+        "*-hot-*": [
+            {
+                "__comment": "Smoke quads",
+                "hsvaColor": [
+                    {
+                        "avg": 0,
+                        "var": 0
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0
+                    },
+                    {
+                        "avg": 70,
+                        "var": 30
+                    },
+                    {
+                        "avg": 220,
+                        "var": 50
+                    }
+                ],
+                "opacityEvolve": {
+                    "transform": "linear",
+                    "factor": -255
+                },
+                "gravityEffect": {
+                    "avg": 0,
+                    "var": 0
+                },
+                "posOffset": [
+                    {
+                        "avg": 0,
+                        "var": 0.4
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0.4
+                    }
+                ],
+                "velocity": [
+                    {
+                        "avg": 0,
+                        "var": 0.025
+                    },
+                    {
+                        "avg": 0.2,
+                        "var": 0.05
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0.025
+                    }
+                ],
+                "quantity": {
+                    "avg": 0.12
+                },
+                "size": {
+                    "avg": 0.3,
+                    "var": 0.05
+                },
+                "sizeEvolve": {
+                    "transform": "linear",
+                    "factor": 1.5
+                },
+                "particleModel": "Quad",
+                "lifeLength": {
+                    "avg": 18
+                },
+                "selfPropelled": true,
+                "windAffectednes": 0.7
+            }
+        ]
+    }
+}

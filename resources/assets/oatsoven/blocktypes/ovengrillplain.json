@@ -1,5 +1,5 @@
 {
-    "code": "ovengrill",
+    "code": "ovengrillplain",
     "entityClass": "OvenGrill",
     "behaviors": [
         {
@@ -7,6 +7,7 @@
         }
     ],
     "variantgroups": [
+        { "code": "rock", "states": ["andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite", "kimberlite", "suevite", "whitemarble", "redmarble", "greenmarble"] },
         {
             "code": "temperature",
             "states": [
@@ -34,6 +35,10 @@
         }
     },
     "blockmaterial": "Stone",
+    "textures": {
+		"rock": {  "base": "game:block/stone/rock/{rock}*" },
+		"smoothstone": {  "base": "game:block/stone/polishedrock/{rock}" }
+	},
     "sidesolid": {
         "all": false
     },
