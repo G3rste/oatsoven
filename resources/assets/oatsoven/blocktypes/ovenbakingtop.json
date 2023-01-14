@@ -1,0 +1,24 @@
+{
+    "code": "ovenbakingtop",
+    "class": "OvenBakingTop",
+    "entityClass": "OvenBakingTop",
+    "variantgroups": [
+    ],
+    "creativeinventory": {
+        "general": [
+            "*"
+        ]
+    },
+    "shape": {
+        "base": "ovenbakingtop"
+    },
+    "blockmaterial": "Stone",
+    "sidesolid": {
+        "all": false
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "lightAbsorption": 1,
+    "maxStackSize": 8
+}

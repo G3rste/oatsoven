@@ -1,0 +1,14 @@
+{
+    "type": "code",
+    "modid": "oatsoven",
+    "name": "Oats oven",
+    "side": "universal",
+    "authors": [
+        "Insert your name here"
+    ],
+    "description": "Creates a usable pizza oven.",
+    "version": "0.0.1",
+    "dependencies": {
+        "game": "1.17.0"
+    }
+}

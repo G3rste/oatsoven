@@ -1,0 +1,5 @@
+{
+    "block-ovenbakingtop": "Stone oven baking space",
+    "block-ovencontroller-*": "Stone oven heat source",
+    "block-ovengrill-*": "Stone oven heat distribution"
+}
