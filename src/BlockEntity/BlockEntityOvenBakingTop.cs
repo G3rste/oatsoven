@@ -1,4 +1,5 @@
 using System;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
@@ -9,7 +10,7 @@ namespace OatsOven
     {
         // We need to offset the height of the bread because it needs to be higher than in the actual vanilla oven
         // the exact numbers are derived from here https://github.com/anegostudios/vssurvivalmod/blob/f69a482d42b0a9544db1992cde147bb0d1609793/Systems/Cooking/Clayoven/BEClayOven.cs#L822
-        const float offset = (14f - 1.01f) / 16f;
+        const float offset = (15f - 1.01f) / 16f;
 
         public override void Initialize(ICoreAPI api)
         {
@@ -35,15 +36,19 @@ namespace OatsOven
             MarkDirty(true);
         }
 
-        protected override bool TryFuel(ItemSlot slot)
+        protected override bool TryAddFuel(ItemSlot slot)
         {
             return false;
         }
 
-        protected override void updateMesh(int index)
+        protected override float[][] genTransformationMatrices()
         {
-            base.updateMesh(index);
-            meshes[index]?.Translate(0, offset, 0);
+            var matrices = base.genTransformationMatrices();
+            for (int i = 0; i < matrices.Length; i++)
+            {
+                matrices[i] = new Matrixf().Set(matrices[i]).Translate(0, offset, 0).Values;
+            }
+            return matrices;
         }
 
         protected override void OnBurnTick(float dt)
