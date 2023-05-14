@@ -1,14 +1,14 @@
 {
     "type": "code",
-    "modid": "oatsoven",
-    "name": "Oat's Oven",
+    "modid": "stonebakeoven",
+    "name": "Stone Bake Oven",
     "side": "universal",
     "authors": [
-        "Captain Oats"
+        "Captain Oats", "G3rste"
     ],
-    "description": "Creates a usable large stone oven.",
-    "version": "0.0.1",
+    "description": "Creates a usable large stone oven for baking.",
+    "version": "1.0.1",
     "dependencies": {
-        "game": "1.17.0"
+        "game": "1.18.0"
     }
 }
