@@ -5,7 +5,7 @@ using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 
-namespace OatsOven
+namespace StoneBakeOven
 {
     public class BlockEntityOvenGrill : BlockEntity, StoneOvenHeatSource
     {

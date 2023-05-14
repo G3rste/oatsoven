@@ -2,7 +2,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.GameContent;
 
-namespace OatsOven
+namespace StoneBakeOven
 {
     public class BlockOvenController : BlockFirepit
     {

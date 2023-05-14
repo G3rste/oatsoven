@@ -4,7 +4,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.GameContent;
 
-namespace OatsOven
+namespace StoneBakeOven
 {
     public class BlockEntityOvenController : BlockEntityFirepit, StoneOvenHeatSource
     {

@@ -1,6 +1,6 @@
 using Vintagestory.API.Common;
 
-namespace OatsOven
+namespace StoneBakeOven
 {
     public class OatsOven : ModSystem
     {

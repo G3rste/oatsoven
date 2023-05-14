@@ -3,7 +3,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
-namespace OatsOven
+namespace StoneBakeOven
 {
     public class BlockOvenBakingTop : BlockClayOven
     {
@@ -11,6 +11,13 @@ namespace OatsOven
         public override void OnLoaded(ICoreAPI api)
         {
             //let the real clay oven do that shit
+        }
+
+        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection bs)
+        {
+            if (world.BlockAccessor.GetBlockEntity(bs.Position) is BlockEntityOvenBakingTop beo) return beo.OnInteract(byPlayer, bs);
+
+            return base.OnBlockInteractStart(world, byPlayer, bs);
         }
 
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
