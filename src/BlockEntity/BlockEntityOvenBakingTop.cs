@@ -96,7 +96,7 @@ namespace StoneBakeOven
                 if (slot == null) return EnumOvenContentMode.Firewood;
 
                 BakingProperties bakingProps = BakingProperties.ReadFrom(slot.Itemstack);
-                if (bakingProps == null) return EnumOvenContentMode.Firewood;
+                if (bakingProps == null) return EnumOvenContentMode.Quadrants;
 
                 return bakingProps.LargeItem ? EnumOvenContentMode.SingleCenter : EnumOvenContentMode.Quadrants;
             }
@@ -770,29 +770,6 @@ namespace StoneBakeOven
 
         protected override MeshData getOrCreateMesh(ItemStack stack, int index)
         {
-            if (OvenContentMode == EnumOvenContentMode.Firewood)
-            {
-                MeshData mesh = getMesh(stack);
-                if (mesh != null) return mesh;
-
-                var loc = AssetLocation.Create(Block.Attributes["ovenFuelShape"].AsString(), Block.Code.Domain).WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
-                nowTesselatingShape = Shape.TryGet(capi, loc);
-                nowTesselatingObj = stack.Collectible;
-
-                if (nowTesselatingShape == null)
-                {
-                    capi.Logger.Error("Stacking model shape for collectible " + stack.Collectible.Code + " not found. Block will be invisible!");
-                    return null;
-                }
-
-                capi.Tesselator.TesselateShape("ovenFuelShape", nowTesselatingShape, out mesh, this, null, 0, 0, 0, stack.StackSize);
-
-                string key = getMeshCacheKey(stack);
-                MeshCache[key] = mesh;
-
-                return mesh;
-            }
-
             return base.getOrCreateMesh(stack, index);
         }
 
